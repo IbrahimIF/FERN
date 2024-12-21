@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Logo.css';
 import Express from '../../assets/Express.png';
-import MongoDB from '../../assets/MongoDB.png';
+import Firebase from '../../assets/Firebase.png';
 import Node from '../../assets/Node.png';
 import Reacts from '../../assets/React.png';
 
@@ -16,7 +16,7 @@ function Display() {
   return (
     <> 
     <div className='logo-Container'>
-      <img src={MongoDB} className="logo mongodb" alt="MongoDB logo" />
+      <img src={Firebase} className="logo firebase" alt="Firebase logo" />
       <img src={Express} className="logo express" alt="Express logo" />
       <img src={Reacts} className="logo react" alt="Reacts logo" />
       <img src={Node} className="logo node" alt="Node logo" />

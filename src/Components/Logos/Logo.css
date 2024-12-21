@@ -12,8 +12,8 @@
     will-change: filter;
     transition: filter 300ms;
   }
-  .logo.mongodb:hover {
-    filter: drop-shadow(0 0 1em #0DED64);
+  .logo.firebase:hover {
+    filter: drop-shadow(0 0 1em #eda20d);
   }
   .logo.express:hover {
     filter: drop-shadow(0 0 1em #5c5c5caa);
