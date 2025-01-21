@@ -1,10 +1,8 @@
-# FERN
-A basic full-stack project that utilises the FERN stack, Firebase, Express, React and Node.
-
-
 <div align="center">
  
-![image](https://github.com/user-attachments/assets/1152b2e2-cf2e-46e6-84b6-f6b931469c11)
+
+![FERN banner](https://github.com/user-attachments/assets/e15ce31e-d782-4fb4-ba7b-9ccf58a73b8c)
+
 
 </div>
 
@@ -13,8 +11,8 @@ A basic full-stack project that utilises the FERN stack, Firebase, Express, Reac
 ![Static Badge](https://img.shields.io/badge/made_with-React_+_Vite-blue)
 
 ##### **Description**:
-This is a very simple project that sends and receives data to my mongoDB atlas collection, utilising express and node.
-A project utilising the MERN stack which stands for MongoDB, Express, React and Nodejs, this project is also using vite with MERN stack which has been deployed on vercel.
+This is a very simple project that sends and receives data to my firebase database, utilising express and node.
+A project utilising the FERN stack which stands for firebase, Express, React and Nodejs, this project is also using vite with FERN stack which has been deployed on vercel.
 
 -----
 
@@ -46,10 +44,10 @@ To run this project locally, you'll need to have Node.js and npm installed on yo
 ## Demo:
 Below is the project link, currently live on Vercel:
 
-[MERN + Vite](https://mern-topaz-xi.vercel.app/).
+[FERN + Vite](https://mern-topaz-xi.vercel.app/).
 
 > [!NOTE] 
-> The project currently live on vercel isn't functioning as intended with the MongoDB cluster.
+> The project currently live on vercel isn't functioning as intended with the Firebase database however works localy.
 > 
 > Updates will be made overtime to rectify this problem.
 
@@ -65,6 +63,11 @@ This project includes:
 ## Technologies and Tools Utilised:
 
 
-[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,mongodb,express,nodejs,vercel,vscode&perline=2)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,firebase,express,nodejs,vercel,vscode&perline=2)](https://skillicons.dev)
 
 ---
+## Acknowledgment:
+
+- [Introduction to the FERN stack](https://javascript.plainenglish.io/getting-started-with-the-fern-stack-firebase-express-react-node-js-2a97b93bd920)
+
+
