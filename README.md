@@ -44,7 +44,7 @@ To run this project locally, you'll need to have Node.js and npm installed on yo
 ## Demo:
 Below is the project link, currently live on Vercel:
 
-[FERN + Vite](https://mern-topaz-xi.vercel.app/).
+[FERN + Vite](https://fern-delta.vercel.app/).
 
 > [!NOTE] 
 > The project currently live on vercel isn't functioning as intended with the Firebase database however works localy.
