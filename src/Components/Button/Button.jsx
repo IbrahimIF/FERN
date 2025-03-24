@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from '../../firebase';
 import './Button.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload }  from '@fortawesome/free-solid-svg-icons';
@@ -10,17 +12,22 @@ function Button({onDataSent}) {
   const [text, setText] = useState('');
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch('/api/Reacr-MongoDB', { //https://react-to-mongodb.vercel.app/ //http://localhost:4000/Reacr-MongoDB
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name, text })
-    })
-    .then(response => response.json())
-    .then(newData => { onDataSent(); });
+    
+    try {
+      await addDoc(collection(db, 'messages'), {
+        name: name,
+        text: text,
+        timestamp: serverTimestamp() // Better than Date.now()
+      });
+      
+      onDataSent();
+      setName('');
+      setText('');
+    } catch (error) {
+      console.error("Error writing to Firestore:", error);
+    }
   };
 
 

@@ -1,4 +1,7 @@
+
+import { collection, onSnapshot } from "firebase/firestore";
 import { useState, useEffect } from 'react';
+import { db } from '../../firebase';
 import './Display.css';
 
 function Display({ isSent, setIsSent }) {
@@ -6,36 +9,37 @@ function Display({ isSent, setIsSent }) {
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
 
+  useEffect(() => {
+    const messagesRef = collection(db, 'messages');
+    
+    const unsubscribe = onSnapshot(messagesRef, 
+      (querySnapshot) => {
+        const messagesData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
 
-  const fetchData = () => {
-    fetch('/api/Reacr-MongoDB') //https://react-to-mongodb.vercel.app/ //http://localhost:4000/Reacr-MongoDB
-      .then(response => response.json())
-      .then(fetchedData => {
-        if (fetchedData.length === 0 ) {
-          setErrorMessage('No data found.');
-          setData([]);
-        } else {
-          setData(fetchedData);
-          setErrorMessage('');
-        }
+        setData(messagesData);
+        setErrorMessage('');
         setIsLoading(false);
-      })
-      .catch(error => {
-        setErrorMessage('Error fetching data');
+      },
+      (error) => {
+        setErrorMessage('Failed to load messages');
         setIsLoading(false);
-      });
-  };
+        console.error("Firestore error:", error);
+      }
+    );
+
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     if (isSent) {
-      fetchData(); // Re-fetch data when the data is sent
-      setTimeout(() => setIsSent(false), 3000); // Hide the confirmation message after 3 seconds
+      setTimeout(() => setIsSent(false), 3000);
     }
   }, [isSent, setIsSent]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+
 
   if (isLoading) {
     return <div className="displayContainer"><div className="loadingContainer"><div>Loading...</div></div></div>;
