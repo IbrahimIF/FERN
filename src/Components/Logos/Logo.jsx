@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import './Logo.css';
-import Express from '../../assets/Express.png';
 import Firebase from '../../assets/Firebase.png';
-import Node from '../../assets/Node.png';
 import Reacts from '../../assets/React.png';
+import Vite from '../../assets/Vitejs-logo.png';
 
 /*font awesome*/
 /*import { FontAwesomeIcon } from "@fortawesome/free-brands-svg-icons";*/
@@ -17,9 +16,8 @@ function Display() {
     <> 
     <div className='logo-Container'>
       <img src={Firebase} className="logo firebase" alt="Firebase logo" />
-      <img src={Express} className="logo express" alt="Express logo" />
       <img src={Reacts} className="logo react" alt="Reacts logo" />
-      <img src={Node} className="logo node" alt="Node logo" />
+      <img src={Vite} className="logo vite" alt="Vite logo" />
     </div>
     </>
   );
