@@ -1,7 +1,7 @@
 <div align="center">
  
+![image](https://github.com/user-attachments/assets/3825e9f6-e610-4143-af6c-c3578334e303)
 
-![FERN banner](https://github.com/user-attachments/assets/e15ce31e-d782-4fb4-ba7b-9ccf58a73b8c)
 
 
 </div>
@@ -11,8 +11,10 @@
 ![Static Badge](https://img.shields.io/badge/made_with-React_+_Vite-blue)
 
 ##### **Description**:
-This is a very simple project that sends and receives data to my firebase database, utilising express and node.
-A project utilising the FERN stack which stands for firebase, Express, React and Nodejs, this project is also using vite with FERN stack which has been deployed on vercel.
+This is a very simple project that sends and receives data, built with React, Vite and Firebase (Firestore).
+Users can send and view data instantly from the react app with Firebase handling the backend, authentication, and real-time updates—no Express/Node.js server required.
+
+Deployed on vercel.
 
 -----
 
@@ -46,11 +48,6 @@ Below is the project link, currently live on Vercel:
 
 [FERN + Vite](https://fern-delta.vercel.app/).
 
-> [!NOTE] 
-> The project currently live on vercel isn't functioning as intended with the Firebase database however works localy.
-> 
-> Updates will be made overtime to rectify this problem.
-
 ----
 ## Features:
 This project includes:
@@ -63,11 +60,11 @@ This project includes:
 ## Technologies and Tools Utilised:
 
 
-[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,firebase,express,nodejs,vercel,vscode&perline=2)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,firebase,vercel,vscode&perline=2)](https://skillicons.dev)
 
 ---
 ## Acknowledgment:
 
 - [Introduction to the FERN stack](https://javascript.plainenglish.io/getting-started-with-the-fern-stack-firebase-express-react-node-js-2a97b93bd920)
-
+- [Medium - Making use of Google firebase in React](https://samuelbankole.medium.com/google-firebase-in-react-1acc64516788)
 
