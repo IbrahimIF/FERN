@@ -46,7 +46,7 @@ To run this project locally, you'll need to have Node.js and npm installed on yo
 ## Demo:
 Below is the project link, currently live on Vercel:
 
-[FERN + Vite](https://fern-delta.vercel.app/).
+[Firebase + React](https://fern-delta.vercel.app/).
 
 ----
 ## Features:
